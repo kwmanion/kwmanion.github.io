@@ -1,0 +1,62 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #587058 
+}
+
+h1 {
+    color: #587498;
+}
+
+body {
+    padding: 10px;
+}
+
+.tab-navigation {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+.tab-navigation li {
+    display:inline-block;
+    font-weight:bold;
+    opacity:.5;
+    transition: .3s opacity;
+}
+
+.tab-navigation .tab {
+    padding: 5px 10px;
+    cursor: pointer;	
+}
+
+.tab-navigation li:hover {
+    opacity: 1;
+}
+
+.tab-wrapper > input[type="radio"]:nth-child(1):checked ~ .tab-navigation>li:nth-child(1),
+.tab-wrapper > input[type="radio"]:nth-child(2):checked ~ .tab-navigation>li:nth-child(2) {
+    opacity: 1;
+}
+
+.tab-wrapper {
+	position: relative;
+}
+
+.tab-wrapper > input[type="radio"] {
+	display:none;
+}
+
+.tab-wrapper > .tab-content>div {
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: .3s opacity;
+}
+
+.tab-wrapper>input[type="radio"]:nth-child(1):checked ~ .tab-content>div:nth-child(1),
+.tab-wrapper>input[type="radio"]:nth-child(2):checked ~ .tab-content>div:nth-child(2) {
+	height:initial;
+	overflow:initial;
+	opacity:1;
+}

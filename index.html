@@ -9,8 +9,31 @@
 
 <body>
     <h1>
-        Test1
+        CSS Tabs
     </h1>
+
+    <div class="tab-wrapper">
+        <input type="radio" name="tab-group1" id="tab-1" checked />
+        <input type="radio" name="tab-group1" id="tab-2" />
+
+        <ul class="tab-navigation">
+            <li class="tab-item">
+                <label for="tab-1" class="tab">Tab 1</label>
+            </li>
+            <li class="tab-item">
+                <label for="tab-2" class="tab">Tab 2</label>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div>
+                <p>All the info in tab 1.</p>
+            </div>
+            <div>
+                <p>This is what is written in tab 2.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="js/scripts.js"></script>
 </body>
